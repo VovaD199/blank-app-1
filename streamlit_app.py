@@ -18,3 +18,7 @@ if "step" not in st.session_state:
 
 st.write("Current step:", st.session_state.step)
 
+with st.form("user_form"):
+    name = st.text_input("Name")
+    age = st.number_input("Age", min_value=0)
+    submitted = st.form_submit_button("Submit")
