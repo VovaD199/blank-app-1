@@ -49,4 +49,13 @@ def load_data(path):
 def load_model():
     return SomeModel()
 
+import streamlit as st
+
+if "name" not in st.session_state:
+    st.session_state.name = ""
+
+st.session_state.name = st.text_input("Name")
+
+if st.button("Submit"):
+    st.write(f"Hello, {st.session_state.name}")
 
