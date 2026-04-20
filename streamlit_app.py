@@ -31,3 +31,13 @@ if "count" not in st.session_state:
 
 st.button("Add", on_click=increment)
 st.write(st.session_state.count)
+
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.metric("Revenue", "$12,500")
+
+with col2:
+    st.metric("Growth", "+8%")
+
