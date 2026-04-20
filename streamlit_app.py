@@ -22,3 +22,12 @@ with st.form("user_form"):
     name = st.text_input("Name")
     age = st.number_input("Age", min_value=0)
     submitted = st.form_submit_button("Submit")
+
+def increment():
+    st.session_state.count += 1
+
+if "count" not in st.session_state:
+    st.session_state.count = 0
+
+st.button("Add", on_click=increment)
+st.write(st.session_state.count)
