@@ -41,3 +41,12 @@ with col1:
 with col2:
     st.metric("Growth", "+8%")
 
+@st.cache_data
+def load_data(path):
+    return pd.read_csv(path)
+
+@st.cache_resource
+def load_model():
+    return SomeModel()
+
+
