@@ -11,3 +11,10 @@ st.write(f"Hello, {name}")
 
 value = st.slider("Value", 0, 10, 5)
 st.write("Current value:", value)
+
+
+if "step" not in st.session_state:
+    st.session_state.step = 1
+
+st.write("Current step:", st.session_state.step)
+
